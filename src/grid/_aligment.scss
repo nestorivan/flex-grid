@@ -1,0 +1,114 @@
+@mixin aligment($key) {
+    @if not $key {
+        .start {
+            justify-content: flex-start;
+        }
+        .center {
+            justify-content: center;
+        }
+        .end {
+            justify-content: flex-end;
+        }
+        .top {
+            align-items: flex-start;
+        }
+        .middle {
+            align-items: center;
+        }
+        .bottom {
+            align-items: flex-end;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+        .around {
+            justify-content: space-around;
+        }
+        .between {
+            justify-content: space-between;
+        }
+        .first {
+            order: -1;
+        }
+        .last {
+            order: 1;
+        }
+        .wrap {
+            flex-wrap: wrap;
+        }
+        .no-wrap {
+            flex-wrap: nowrap;
+        }
+        .self-start {
+            align-self: flex-start;
+        }
+        .self-center {
+            align-self: center;
+        }
+        .self-end {
+            align-self: flex-end;
+        }
+        .self-baseline {
+            align-self: baseline;
+        }
+        .self-stretch {
+            align-self: stretch;
+        }
+    }
+    @else {
+        .start-#{$key} {
+            justify-content: flex-start;
+        }
+        .center-#{$key} {
+            justify-content: center;
+        }
+        .end-#{$key} {
+            justify-content: flex-end;
+        }
+        .top-#{$key} {
+            align-items: flex-start;
+        }
+        .middle-#{$key} {
+            align-items: center;
+        }
+        .bottom-#{$key} {
+            align-items: flex-end;
+        }
+        .baseline-#{$key} {
+            align-items: baseline;
+        }
+        .around-#{$key} {
+            justify-content: space-around;
+        }
+        .between-#{$key} {
+            justify-content: space-between;
+        }
+        .first-#{$key} {
+            order: -1;
+        }
+        .last-#{$key} {
+            order: 1;
+        }
+        .wrap-#{$key} {
+            flex-wrap: wrap;
+        }
+        .no-wrap-#{$key} {
+            flex-wrap: nowrap;
+        }
+        .self-start-#{$key} {
+            align-self: flex-start;
+        }
+        .self-center-#{$key} {
+            align-self: center;
+        }
+        .self-end-#{$key} {
+            align-self: flex-end;
+        }
+        .self-baseline-#{$key} {
+            align-self: baseline;
+        }
+        .self-stretch-#{$key} {
+            align-self: stretch;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+$container-width:(sm:49rem, md:65rem, lg:76rem);
+.fcontainer-fluid,
+.fcontainer {
+    margin: 0 auto;
+}
+
+.fcontainer-fluid {
+    padding: 0 2rem;
+}
+
+@mixin container($key) {
+    @if($key=='lg') {
+        .container {
+            width: map-get($container-width, $key);
+        }
+    }
+    @else if($key=='md') {
+        .container {
+            width: map-get($container-width, $key);
+        }
+    }
+    @else if($key=='sm') {
+        .container {
+            width: map-get($container-width, $key);
+        }
+    }
+}

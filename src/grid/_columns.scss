@@ -1,0 +1,48 @@
+    .fcol {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        .reverse {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @mixin col($key, $flag:false) {
+        @if($flag==false) {
+            @for $i from 1 through 12 {
+                .fcol-#{$key}-#{$i} {
+                    min-height: 1px;
+                    width: percentage($i / 12);
+                    max-width: percentage($i / 12);
+                    padding-left: $gutter / 2;
+                    padding-right: $gutter / 2;
+                }
+                .frow-#{$key}-#{$i} {
+                    min-height: 1px;
+                    flex: 0 0 percentage($i / 12);
+                    max-height: percentage($i / 12);
+                }
+            }
+            @for $i from 1 through 11 {
+                .fcol-#{$key}-offset-#{$i} {
+                    margin-left: percentage($i / 12);
+                }
+            }
+        }
+        @else {
+            @for $i from 1 through 12 {
+                .fcol-#{$key}-#{$i} {
+                    min-height: 1px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .frow-#{$key}-#{$i} {
+                    min-height: 1px;
+                    flex: 0 0 100%;
+                    max-height: 100%;
+                    padding-left: $gutter / 2;
+                    padding-right: $gutter / 2;
+                }
+            }
+        }
+    }

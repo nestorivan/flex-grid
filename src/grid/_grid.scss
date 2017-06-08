@@ -1,0 +1,49 @@
+@import './_container.scss';
+@import './_row.scss';
+@import './_columns.scss';
+@import './_media-queries.scss';
+@import './_aligment.scss';
+
+@include aligment(null);
+
+@each $key,
+$value in $breakpoints {
+    @include col($key, true);
+}
+
+@each $key,
+$value in $breakpoints {
+    @if($key=='cs') {
+        @include cs {
+            @include col($key);
+            @include aligment($key);
+        }
+    }
+    @if($key=='xs') {
+        @include xs {
+            @include col($key);
+            @include aligment($key);
+        }
+    }
+    @if($key=='sm') {
+        @include sm {
+            @include col($key);
+            @include aligment($key);
+            @include container($key);
+        }
+    }
+    @if($key=='md') {
+        @include md {
+            @include col($key);
+            @include aligment($key);
+            @include container($key);
+        }
+    }
+    @if($key=='lg') {
+        @include lg {
+            @include col($key);
+            @include aligment($key);
+            @include container($key);
+        }
+    }
+}
