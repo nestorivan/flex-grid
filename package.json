@@ -1,0 +1,21 @@
+{
+  "name": "flex-grill",
+  "version": "0.0.1",
+  "description": "A grid built with love and flexbox.",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "src",
+    "dist",
+    "readme.md"
+  ],
+  "author": "UI Kit",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1"
+  }
+}
