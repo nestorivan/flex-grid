@@ -1,11 +1,37 @@
 {
   "name": "flex-grill",
   "version": "0.0.1",
+  "keywords": [
+    "flex",
+    "flexbox",
+    "grid",
+    "grid system",
+    "layout"
+  ],
+  "contributors": [
+    {
+      "name": "Néstor Iván López Delgadillo",
+      "email": "elnestorivan@gmail.com",
+      "url": "https://github.com/nestorivan"
+    },
+    {
+      "name": "Luis Rogelio Hernández López",
+      "email": "luis.hlopez@outlook.com",
+      "url": "https://github.com/Kurtz1993"
+    }
+  ],
   "description": "A grid built with love and flexbox.",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
     "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestorivan/flex-grill"
+  },
+  "bugs": {
+    "url": "https://github.com/nestorivan/flex-grill/issues"
   },
   "files": [
     "src",
